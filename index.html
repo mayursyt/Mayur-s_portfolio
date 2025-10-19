@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayur Sonawane | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MAYUR</a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">MAYUR SONAWANE</span>
+            </h1>
+            <div class="terminal-line">
+                <span class="prompt">ABOUT ME:</span>
+                <span class="typing-text" id="typing-text">AI Data Science Student | Web Developer</span>
+                <span class="terminal-cursor"></span>
+            </div>
+            <p class="hero-subtitle">
+            </p>
+            <a href="#projects" class="btn-terminal">EXECUTE: View Projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="about scroll-reveal">
+        <div class="container">
+            <h2 class="section-title reveal-text-left">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text reveal-text-left">
+                    <p class="about-description">
+                       <br>
+                        I'm Mayur Sonawane from Dugaon, Maharashtra, currently pursuing B.Tech in Artificial Intelligence and Data Science at Sanjivani University. I'm passionate about web development, AI projects, and learning new technologies.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-label">YEAR</span>
+                            <span class="stat-number">1</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Experiance of coading</span>
+                            <span class="stat-number">1</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="about-image reveal-photo">
+                    <div class="profile-photo-container">
+                        <img src="mayursphoto.jpg" alt="Mayur Sonawane head-and-shoulders portrait" class="profile-photo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects scroll-reveal">
+        <div class="container">
+            <h2 class="section-title reveal-text-left">MY PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal-card">
+                    <i class="project-icon fas fa-server"></i>
+                    <h3>[PROJECT_001] Data Pipeline</h3>
+                    <p>Built a high-throughput, low-latency ETL pipeline for real-time data ingestion and processing.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>AWS Lambda</span>
+                        <span>Kafka</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-card">
+                    <i class="project-icon fas fa-code-branch"></i>
+                    <h3>[PROJECT_002] Microservice API</h3>
+                    <p>Designed and deployed a suite of RESTful microservices, enhancing system scalability by 400%.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-card">
+                    <i class="project-icon fas fa-terminal"></i>
+                    <h3>[PROJECT_003] CLI Utility</h3>
+                    <p>Developed a custom Command Line Interface (CLI) tool to automate developer workflow and deployments.</p>
+                    <div class="project-tech">
+                        <span>Go Lang</span>
+                        <span>Bash</span>
+                        <span>Git Actions</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact scroll-reveal">
+        <div class="container">
+            <h2 class="section-title reveal-text-left">LET'S CONNECT</h2>
+            <p class="contact-description reveal-text-left">
+                Connect with me via the links below or send a message.
+            </p>
+
+            <div class="contact-buttons reveal-card">
+                <a href="mailto:mayursyt@gmail.com" class="contact-btn">
+                    <i class="btn-icon fas fa-envelope"></i>
+                    EMAIL
+                </a>
+                <a href="tel:+919270202894" class="contact-btn">
+                    <i class="btn-icon fas fa-phone"></i>
+                    CALL
+                </a>
+                <a href="https://github.com/mayursyt" target="_blank" class="contact-btn">
+                    <i class="btn-icon fab fa-github"></i>
+                    GITHUB
+                </a>
+                <a href="https://www.linkedin.com/in/mayur-sonawane-683833373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-btn">
+                    <i class="btn-icon fab fa-linkedin"></i>
+                    LINKEDIN
+                </a>
+                <a href="https://www.instagram.com/i.e.mayur?igsh=MWtyMGZ4YW82M21ibQ==" target="_blank" class="contact-btn">
+                    <i class="btn-icon fab fa-instagram"></i>
+                    INSTAGRAM
+                </a>
+            </div>
+            
+            <form class="contact-form reveal-card" action="https://formsubmit.co/mayursyt@gmail.com" method="POST">
+                <div class="form-group">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="Message" placeholder="MESSAGE" required></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="New Portfolio Message from Mayur Sonawane Website">
+                <input type="hidden" name="_next" value="/#contact"> 
+                <button type="submit" class="btn-terminal">RUN: Send</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                &copy; © 2025 Mayur Sonawane | All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. Mobile Menu and Typing Effect (Existing Code) ---
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingTextElement = document.getElementById('typing-text');
+            const terminalCursorElement = document.querySelector('.terminal-cursor');
+            
+            if (typingTextElement) {
+                typingTextElement.addEventListener('animationend', (event) => {
+                    if (event.animationName === 'typing' && terminalCursorElement) {
+                        terminalCursorElement.style.animationPlayState = 'running';
+                    }
+                });
+            }
+        });
+
+       
+        
+      
+        const revealElements = document.querySelectorAll(
+            '.reveal-text-left, .reveal-photo, .reveal-card, .scroll-reveal .about-text, .scroll-reveal .about-stats, .scroll-reveal .contact-buttons, .scroll-reveal .contact-form, .scroll-reveal .section-title, .scroll-reveal .contact-description'
+        );
+
+       
+        const revealContent = function (entries, observer) {
+            entries.forEach(entry => {
+               
+                if (entry.isIntersecting) {
+                    
+                    entry.target.classList.add('visible');
+                   
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+    
+        const contentObserver = new IntersectionObserver(revealContent, {
+            root: null,
+            threshold: 0.1, 
+            rootMargin: '0px 0px -100px 0px' 
+        });
+
+        // 4. Start observing each element
+        revealElements.forEach(element => {
+            contentObserver.observe(element);
+        });
+    </script>
+
+</body>
+
+</html>
