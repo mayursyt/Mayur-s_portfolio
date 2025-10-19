@@ -17,7 +17,7 @@ body {
   font-family: 'Inter', sans-serif; /* Clean, modern font */
   color: #FAFAFA; /* Bright white text */
   line-height: 1.6;
-  /* Removed overflow-x: hidden to allow scaling/zooming on mobile */
+  overflow-x: hidden;
 }
 
 /* --- Color Palette --- */
@@ -101,10 +101,9 @@ body {
   background-color: #C1F9C1;
 }
 
-/* Hamburger */
-/* Hamburger icon is permanently hidden as the full desktop menu will be displayed (scaled down) */
+/* Hamburger (for Mobile) */
 .hamburger {
-  display: none; 
+  display: none;
   flex-direction: column;
   cursor: pointer;
 }
@@ -114,7 +113,6 @@ body {
   height: 3px;
   background-color: #90EE90;
   margin: 4px 0;
-  transition: all 0.3s ease-in-out; 
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -555,7 +553,72 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- REMOVED RESPONSIVE MEDIA QUERY ---
-The following block was removed to ensure the desktop layout is preserved on all screens:
-@media (max-width: 768px) { ... } 
---------------------------------------- */
+
+/* Responsive Design (Unchanged) */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #111111;
+    border-top: 5px solid #90EE90;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+  
+  .section-title::after {
+      left: 50%;
+      transform: translateX(-50%) skewX(-45deg);
+  }
+
+  .about-text {
+    text-align: center;
+  }
+  
+  .about-description {
+      border-left: none;
+      padding-left: 0;
+      text-align: center;
+  }
+  
+  .about-stats {
+      max-width: 350px;
+      margin: 0 auto;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
