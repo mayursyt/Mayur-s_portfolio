@@ -66,7 +66,7 @@
                 </div>
                  <div class="about-image reveal-photo">
                     <div class="profile-photo-container">
-                        <img src="mayursphoto.jpg" alt="Mayur Sonawane head-and-shoulders portrait" class="profile-photo" loading="lazy">
+                        <img src="mayursphoto.jpg" alt="Mayur Sonawane head-and-shoulder portrait" class="profile-photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -171,30 +171,32 @@
     </footer>
 
     <script>
-        // --- 1. Mobile Menu and Typing Effect (Existing Code) ---
+        // --- 1. Mobile Menu and Typing Effect ---
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
 
+        // Toggle mobile menu visibility
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
+        // Close menu when a navigation link is clicked
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
         
+        // Typing effect logic
         document.addEventListener('DOMContentLoaded', () => {
             const typingTextElement = document.getElementById('typing-text');
             const terminalCursorElement = document.querySelector('.terminal-cursor');
             
             if (typingTextElement) {
+                // When typing animation ends, start the cursor blinking animation
                 typingTextElement.addEventListener('animationend', (event) => {
                     if (event.animationName === 'typing' && terminalCursorElement) {
+                        // This logic is mostly disabled on mobile via CSS, but kept for desktop
                         terminalCursorElement.style.animationPlayState = 'running';
                     }
                 });
@@ -202,8 +204,7 @@
         });
 
        
-        
-      
+        // --- 2. Scroll Reveal Logic ---
         const revealElements = document.querySelectorAll(
             '.reveal-text-left, .reveal-photo, .reveal-card, .scroll-reveal .about-text, .scroll-reveal .about-stats, .scroll-reveal .contact-buttons, .scroll-reveal .contact-form, .scroll-reveal .section-title, .scroll-reveal .contact-description'
         );
@@ -228,7 +229,7 @@
             rootMargin: '0px 0px -100px 0px' 
         });
 
-        // 4. Start observing each element
+        // Start observing each element
         revealElements.forEach(element => {
             contentObserver.observe(element);
         });
